@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "347484496286",
+    "firebase_url": "https://alnjda-rs-default-rtdb.firebaseio.com",
+    "project_id": "alnjda-rs",
+    "storage_bucket": "alnjda-rs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347484496286:android:7f83667401675d49fa768f",
+        "android_client_info": {
+          "package_name": "com.alnajdars.users"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347484496286-qdrium8tf0msgio0oeanv78s44obe2te.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4gU1ACxXaBwdqbK6z7KvCznPZemheDoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347484496286-qdrium8tf0msgio0oeanv78s44obe2te.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

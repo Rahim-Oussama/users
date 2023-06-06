@@ -485,7 +485,7 @@ class _MainScreenState extends State<MainScreen> {
         //status = arrived
         if (userRideRequestStatus == "arrived") {
           setState(() {
-            driverRideStatus = "Driver has arrived";
+            driverRideStatus = "ALNAJDA has arrived";
           });
         }
 

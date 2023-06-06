@@ -24,19 +24,20 @@ class DrawerScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(30),
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.lightBlue,
+                      color: const Color.fromARGB(255, 129, 132, 133),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
                       Icons.person,
                       color: Colors.white,
+                      size: 50,
                     ),
                   ),
-
-                  SizedBox(height: 20,),
-
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     userModelCurrentInfo!.name!,
                     style: TextStyle(
@@ -44,61 +45,83 @@ class DrawerScreen extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-
-                  SizedBox(height: 10,),
-
+                  SizedBox(
+                    height: 10,
+                  ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (c) => ProfileScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (c) => ProfileScreen()));
                     },
                     child: Text(
                       "Edit Profile",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
-                        color: Colors.blue,
+                        color: Color(0xFFFC9D45),
                       ),
                     ),
                   ),
-
-                  SizedBox(height: 30,),
-
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (c) => TripsHistoryScreen()));
-                    },
-                    child: Text("Your Trips", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),)
+                  SizedBox(
+                    height: 30,
                   ),
-
-                  SizedBox(height: 15,),
-
-                  Text("Payment", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-
-                  SizedBox(height: 15,),
-
-                  Text("Notifications", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-
-                  SizedBox(height: 15,),
-
-                  Text("Promos", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-
-                  SizedBox(height: 15,),
-
-                  Text("Help", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-
-                  SizedBox(height: 15,),
-
-                  Text("Free Trips", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-
-                  SizedBox(height: 15,),
-
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (c) => TripsHistoryScreen()));
+                      },
+                      child: Text(
+                        "Your Trips",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      )),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Payment",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Notifications",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Promos",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Help",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Free Trips",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
                 ],
               ),
-
               GestureDetector(
                 onTap: () {
                   firebaseAuth.signOut();
-                  Navigator.push(context, MaterialPageRoute(builder: (c) => SplashScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (c) => SplashScreen()));
                 },
                 child: Text(
                   "Logout",
@@ -109,7 +132,6 @@ class DrawerScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
         ),

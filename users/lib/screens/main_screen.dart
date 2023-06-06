@@ -747,7 +747,9 @@ class _MainScreenState extends State<MainScreen> {
                         darkTheme ? Colors.amber.shade400 : Colors.white,
                     child: Icon(
                       Icons.menu,
-                      color: darkTheme ? Colors.black : Colors.lightBlue,
+                      color: darkTheme
+                          ? Colors.black
+                          : Color.fromARGB(255, 236, 122, 15),
                     ),
                   ),
                 ),
@@ -956,7 +958,7 @@ class _MainScreenState extends State<MainScreen> {
                                   }
                                 },
                                 child: Text(
-                                  "Show Fare",
+                                  "Need a service",
                                   style: TextStyle(
                                     color:
                                         darkTheme ? Colors.black : Colors.white,
@@ -969,18 +971,8 @@ class _MainScreenState extends State<MainScreen> {
                                     textStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
-                                    )),
-                                style: ElevatedButton.styleFrom(
-                                  primary: darkTheme
-                                      ? Colors.amber.shade400
-                                      : Color(0xff573353),
-                                  textStyle: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
-                                  minimumSize: Size(200,
-                                      60), // Adjust the width and height as needed
-                                ),
+                                    ),
+                                    minimumSize: Size(200, 60)),
                               ),
                             ],
                           ),
@@ -1017,12 +1009,12 @@ class _MainScreenState extends State<MainScreen> {
                             decoration: BoxDecoration(
                               color: darkTheme
                                   ? Colors.amber.shade400
-                                  : Colors.blue,
+                                  : Color(0xFFFC9D45),
                               borderRadius: BorderRadius.circular(2),
                             ),
                             child: Icon(
                               Icons.star,
-                              color: Colors.white,
+                              color: Color(0xff573353),
                             ),
                           ),
                           SizedBox(
@@ -1103,7 +1095,7 @@ class _MainScreenState extends State<MainScreen> {
                                 color: selectedVehicleType == "Towing"
                                     ? (darkTheme
                                         ? Colors.amber.shade400
-                                        : Colors.blue)
+                                        : Color(0xFFFC9D45))
                                     : (darkTheme
                                         ? Colors.black54
                                         : Colors.grey[100]),
@@ -1161,7 +1153,7 @@ class _MainScreenState extends State<MainScreen> {
                                 color: selectedVehicleType == "Mechanic"
                                     ? (darkTheme
                                         ? Colors.amber.shade400
-                                        : Colors.blue)
+                                        : Color(0xFFFC9D45))
                                     : (darkTheme
                                         ? Colors.black54
                                         : Colors.grey[100]),
@@ -1218,7 +1210,7 @@ class _MainScreenState extends State<MainScreen> {
                                 color: selectedVehicleType == "Electric"
                                     ? (darkTheme
                                         ? Colors.amber.shade400
-                                        : Colors.blue)
+                                        : Color(0xFFFC9D45))
                                     : (darkTheme
                                         ? Colors.black54
                                         : Colors.grey[100]),
@@ -1267,7 +1259,7 @@ class _MainScreenState extends State<MainScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 35,
                       ),
                       Expanded(
                         child: GestureDetector(
@@ -1285,8 +1277,8 @@ class _MainScreenState extends State<MainScreen> {
                             decoration: BoxDecoration(
                                 color: darkTheme
                                     ? Colors.amber.shade400
-                                    : Colors.blue,
-                                borderRadius: BorderRadius.circular(10)),
+                                    : Color(0xff573353),
+                                borderRadius: BorderRadius.circular(15)),
                             child: Center(
                               child: Text(
                                 "Request a Ride",
@@ -1327,7 +1319,9 @@ class _MainScreenState extends State<MainScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       LinearProgressIndicator(
-                        color: darkTheme ? Colors.amber.shade400 : Colors.blue,
+                        color: darkTheme
+                            ? Colors.amber.shade400
+                            : Color(0xFFFC9D45),
                       ),
                       SizedBox(
                         height: 10,
@@ -1357,9 +1351,10 @@ class _MainScreenState extends State<MainScreen> {
                           height: 50,
                           width: 50,
                           decoration: BoxDecoration(
-                            color: darkTheme ? Colors.black : Colors.white,
+                            color: darkTheme ? Color(0xff573353) : Colors.white,
                             borderRadius: BorderRadius.circular(25),
-                            border: Border.all(width: 1, color: Colors.grey),
+                            border:
+                                Border.all(width: 1, color: Color(0xFFFC9D45)),
                           ),
                           child: Icon(
                             Icons.close,

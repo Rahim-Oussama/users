@@ -560,11 +560,11 @@ class _MainScreenState extends State<MainScreen> {
     print("Driver List: " + driversList.toString());
 //-------------------------------------------------------------------------------------------------------------------------------
     for (int i = 0; i < driversList.length; i++) {
-      //if (driversList[i]["car_details"]["type"] == selectedVehicleType) {
-      AssistantMethods.sendNotificationToDriverNow(
-          driversList[i]["token"], referenceRideRequest!.key!, context);
+      if (driversList[i]["car_details"]["type"] == selectedVehicleType) {
+        AssistantMethods.sendNotificationToDriverNow(
+            driversList[i]["token"], referenceRideRequest!.key!, context);
+      }
     }
-    // }
 
     Fluttertoast.showToast(msg: "Notification sent Successfully");
 

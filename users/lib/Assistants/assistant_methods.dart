@@ -38,7 +38,7 @@ class AssistantMethods {
     var requestResponse = await RequestAssistant.receiveRequest(apiUrl);
 
     if (requestResponse != "Error Occured. Failed. No Response.") {
-      humanReadableAddress = requestResponse["results"][0]["formatted_address"];
+      humanReadableAddress = "${position.longitude},${position.latitude},";
 
       Directions userPickUpAddress = Directions();
       userPickUpAddress.locationLatitude = position.latitude;

@@ -14,15 +14,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   startTimer() {
     Timer(Duration(seconds: 3), () async {
-      if(await firebaseAuth.currentUser != null){
-        firebaseAuth.currentUser != null ? AssistantMethods.readCurrentOnlineUserInfo() : null;
-        Navigator.push(context, MaterialPageRoute(builder: (c) => MainScreen()));
-      }
-      else{
-        Navigator.push(context, MaterialPageRoute(builder: (c) => LoginScreen()));
+      if (await firebaseAuth.currentUser != null) {
+        firebaseAuth.currentUser != null
+            ? AssistantMethods.readCurrentOnlineUserInfo()
+            : null;
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => MainScreen()));
+      } else {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => LoginScreen()));
       }
     });
   }
@@ -38,12 +40,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          'Trippo',
-          style: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'images/splash_image.png'), // Replace with your image asset path
+            fit: BoxFit.cover,
           ),
         ),
       ),

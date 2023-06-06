@@ -1,4 +1,3 @@
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:users/models/direction_details_info.dart';
 
@@ -9,7 +8,8 @@ User? currentUser;
 
 UserModel? userModelCurrentInfo;
 
-String cloudMessagingServerToken = "key=AAAABtiQzP4:APA91bFTLzNNnLGlU6Cdl-75HQLFHUOP7oLGJbCN_7kzGbzh3mFmS1F241dWxhdih3P02ih4k6omdxZdcq_m6lCX7YgqsnfAxUpic2oFGapKriffda3m4ebpOnJwFUVSQsqnkkBwArz_";
+String cloudMessagingServerToken =
+    "key=AAAAUOewoZ4:APA91bFGs-zthiqRuahZLjIyWo_HqkQG9hRlTiOA5w1NAVsN1wqwybYu9JF2wj2a4Hoix7iouk3XiJgEuNqeZQ80ZU6btFYgQMyEuAYubw0RI40Vzo56YKvuxhcAQ1qyJfyAzY10t_cC";
 List driversList = [];
 DirectionDetailsInfo? tripDirectionDetailsInfo;
 String userDropOffAddress = "";

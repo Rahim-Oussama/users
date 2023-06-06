@@ -940,7 +940,7 @@ class _MainScreenState extends State<MainScreen> {
                               //       )),
                               // ),
                               SizedBox(
-                                width: 5,
+                                width: 15,
                               ),
                               ElevatedButton(
                                 onPressed: () {
@@ -968,8 +968,19 @@ class _MainScreenState extends State<MainScreen> {
                                         : Color(0xff573353),
                                     textStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 16,
+                                      fontSize: 20,
                                     )),
+                                style: ElevatedButton.styleFrom(
+                                  primary: darkTheme
+                                      ? Colors.amber.shade400
+                                      : Color(0xff573353),
+                                  textStyle: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
+                                  minimumSize: Size(200,
+                                      60), // Adjust the width and height as needed
+                                ),
                               ),
                             ],
                           ),

@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:users/infoHandler/app_info.dart';
 import 'package:users/screens/login_screen.dart';
 import 'package:users/screens/main_screen.dart';
+import 'package:users/screens/onboarding_page.dart';
 import 'package:users/screens/rate_driver_screen.dart';
 import 'package:users/screens/register_screen.dart';
 import 'package:users/screens/search_places_screen.dart';
@@ -12,6 +14,8 @@ import 'package:users/themeProvider/theme_provider.dart';
 import 'package:users/widgets/pay_fare_amount_dialog.dart';
 
 Future<void> main() async {
+  // SharedPreferences pref = await SharedPreferences.getInstance();
+  // seenOnboard = pref.getBool('seenOnboard') ?? false;
   runApp(const MyApp());
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();

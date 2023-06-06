@@ -46,7 +46,7 @@ class DrawerScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 30,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -77,58 +77,61 @@ class DrawerScreen extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15),
                       )),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    "Payment",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    "Notifications",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    "Promos",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    "Help",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    "Free Trips",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
+                  // SizedBox(
+                  //   height: 15,
+                  // ),
+                  // Text(
+                  //   "Payment",
+                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  // ),
+                  // SizedBox(
+                  //   height: 15,
+                  // ),
+                  // Text(
+                  //   "Notifications",
+                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  // ),
+                  // SizedBox(
+                  //   height: 15,
+                  // ),
+                  // Text(
+                  //   "Promos",
+                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  // ),
+                  // SizedBox(
+                  //   height: 15,
+                  // ),
+                  // Text(
+                  //   "Help",
+                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  // ),
+                  // SizedBox(
+                  //   height: 15,
+                  // ),
+                  // Text(
+                  //   "Free Trips",
+                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  // ),
                   SizedBox(
                     height: 15,
                   ),
                 ],
               ),
-              GestureDetector(
-                onTap: () {
-                  firebaseAuth.signOut();
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (c) => SplashScreen()));
-                },
-                child: Text(
-                  "Logout",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.red,
+              Padding(
+                padding: EdgeInsets.only(bottom: 15, left: 10),
+                child: GestureDetector(
+                  onTap: () {
+                    firebaseAuth.signOut();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (c) => SplashScreen()));
+                  },
+                  child: Text(
+                    "Logout",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.red,
+                    ),
                   ),
                 ),
               ),

@@ -560,7 +560,7 @@ class _MainScreenState extends State<MainScreen> {
     print("Driver List: " + driversList.toString());
 //-------------------------------------------------------------------------------------------------------------------------------
     for (int i = 0; i < driversList.length; i++) {
-      if (driversList[i]["car_details"]["type"] == selectedVehicleType) {
+      if (driversList[i]["car_details"]["car_type"] == selectedVehicleType) {
         AssistantMethods.sendNotificationToDriverNow(
             driversList[i]["token"], referenceRideRequest!.key!, context);
       }
@@ -965,7 +965,7 @@ class _MainScreenState extends State<MainScreen> {
                                 style: ElevatedButton.styleFrom(
                                     primary: darkTheme
                                         ? Colors.amber.shade400
-                                        : Colors.blue,
+                                        : Color(0xff573353),
                                     textStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -1034,38 +1034,38 @@ class _MainScreenState extends State<MainScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 15,
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(2),
-                            decoration: BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.circular(2),
-                            ),
-                            child: Icon(
-                              Icons.star,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Text(
-                            Provider.of<AppInfo>(context).userDropOffLocation !=
-                                    null
-                                ? Provider.of<AppInfo>(context)
-                                    .userDropOffLocation!
-                                    .locationName!
-                                : "Where to?",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   children: [
+                      //     Container(
+                      //       padding: EdgeInsets.all(2),
+                      //       decoration: BoxDecoration(
+                      //         color: Colors.grey,
+                      //         borderRadius: BorderRadius.circular(2),
+                      //       ),
+                      //       child: Icon(
+                      //         Icons.star,
+                      //         color: Colors.white,
+                      //       ),
+                      //     ),
+                      //     SizedBox(
+                      //       width: 15,
+                      //     ),
+                      // Text(
+                      //   Provider.of<AppInfo>(context).userDropOffLocation !=
+                      //           null
+                      //       ? Provider.of<AppInfo>(context)
+                      //           .userDropOffLocation!
+                      //           .locationName!
+                      //       : "Where to?",
+                      //   style: TextStyle(
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 18,
+                      //   ),
+                      // ),
+                      //   ],
+                      // ),
                       SizedBox(
                         height: 20,
                       ),
@@ -1142,12 +1142,12 @@ class _MainScreenState extends State<MainScreen> {
                           GestureDetector(
                             onTap: () {
                               setState(() {
-                                selectedVehicleType = "mechanic";
+                                selectedVehicleType = "Mechanic";
                               });
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                color: selectedVehicleType == "mechanic"
+                                color: selectedVehicleType == "Mechanic"
                                     ? (darkTheme
                                         ? Colors.amber.shade400
                                         : Colors.blue)
@@ -1168,10 +1168,10 @@ class _MainScreenState extends State<MainScreen> {
                                       height: 8,
                                     ),
                                     Text(
-                                      "mechanic",
+                                      "Mechanic",
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: selectedVehicleType == "mechanic"
+                                        color: selectedVehicleType == "Mechanic"
                                             ? (darkTheme
                                                 ? Colors.black
                                                 : Colors.white)

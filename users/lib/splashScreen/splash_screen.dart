@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:users/Assistants/assistant_methods.dart';
 import 'package:users/global/global.dart';
 import 'package:users/screens/login_screen.dart';
@@ -14,6 +15,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  // SharedPreferences pref = await SharedPreferences.getInstance();
+  // seenOnboard = pref.getBool('seenOnboard') ?? false;
   startTimer() {
     Timer(Duration(seconds: 3), () async {
       if (await firebaseAuth.currentUser != null) {

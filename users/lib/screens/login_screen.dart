@@ -82,7 +82,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 Text(
                   'Login',
                   style: TextStyle(
-                    color: darkTheme ? Colors.amber.shade400 : Colors.blue,
+                    color: darkTheme
+                        ? Colors.amber.shade400
+                        : Color.fromARGB(255, 106, 46, 99),
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
@@ -214,7 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 style: ElevatedButton.styleFrom(
                                   primary: darkTheme
                                       ? Colors.amber.shade400
-                                      : Colors.blue,
+                                      : Color(0xFFFC9D45),
                                   onPrimary:
                                       darkTheme ? Colors.black : Colors.white,
                                   elevation: 0,
@@ -229,8 +231,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: Text(
                                   'Login',
                                   style: TextStyle(
-                                    fontSize: 20,
-                                  ),
+                                      fontSize: 20, color: Color(0xff573353)),
                                 )),
                             SizedBox(
                               height: 20,
@@ -248,7 +249,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 style: TextStyle(
                                   color: darkTheme
                                       ? Colors.amber.shade400
-                                      : Colors.blue,
+                                      : Color(0xff573353),
                                 ),
                               ),
                             ),
@@ -281,7 +282,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       fontSize: 15,
                                       color: darkTheme
                                           ? Colors.amber.shade400
-                                          : Colors.blue,
+                                          : Color(0xff573353),
                                     ),
                                   ),
                                 )

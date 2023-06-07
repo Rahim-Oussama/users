@@ -84,7 +84,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Text(
                   'Register',
                   style: TextStyle(
-                    color: darkTheme ? Colors.amber.shade400 : Colors.blue,
+                    color:
+                        darkTheme ? Colors.amber.shade400 : Color(0xff573353),
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
@@ -405,7 +406,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 style: ElevatedButton.styleFrom(
                                   primary: darkTheme
                                       ? Colors.amber.shade400
-                                      : Colors.blue,
+                                      : Color(0xFFFC9D45),
                                   onPrimary:
                                       darkTheme ? Colors.black : Colors.white,
                                   elevation: 0,
@@ -420,8 +421,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 child: Text(
                                   'Register',
                                   style: TextStyle(
-                                    fontSize: 20,
-                                  ),
+                                      fontSize: 20, color: Color(0xff573353)),
                                 )),
                             SizedBox(
                               height: 20,
@@ -433,7 +433,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 style: TextStyle(
                                   color: darkTheme
                                       ? Colors.amber.shade400
-                                      : Colors.blue,
+                                      : Color(0xff573353),
                                 ),
                               ),
                             ),
@@ -461,7 +461,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       fontSize: 15,
                                       color: darkTheme
                                           ? Colors.amber.shade400
-                                          : Colors.blue,
+                                          : Color(0xff573353),
                                     ),
                                   ),
                                 )
